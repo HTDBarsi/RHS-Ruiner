@@ -10,7 +10,7 @@ local plr = ""
 
 Section:NewTextBox("plr", "player", function(txt)
 	for i,v in pairs(game.Players:GetChildren()) do
-		if string.match(v.Name,txt) then
+		if string.match(string.lower(v.Name),string.lower(txt)) then
 			plr = v
 		end
 	end
